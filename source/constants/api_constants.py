@@ -1,15 +1,21 @@
 #APIConstants - class which contains all the endpoint
-# Keep the URLS
+# APIConstants - Class which contain all the endpoints. # Keep the URLs
+
+# Concepts
+# Static Method -> Which can be called by without the Object directly by using
+# class you can call it
 
 class APIConstants(object):
-    def base_url(self):
+    @staticmethod
+    def base_url():
         return "https://restful-booker.herokuapp.com/"
 
-
-    def url_create_booking(self):
+    @staticmethod
+    def url_create_booking():
         return "https://restful-booker.herokuapp.com/booking"
 
-    def url_create_token(self):
+    @staticmethod
+    def url_create_token():
         return "https://restful-booker.herokuapp.com/auth"
 
     def url_patch_put_delete(sellf,booking_id):
